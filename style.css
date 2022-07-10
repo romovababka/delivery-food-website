@@ -7,7 +7,6 @@ header{
 #main-part {
     padding-top: 60px;
 }
-
 .shops{
     position: fixed;
 }
@@ -24,4 +23,12 @@ a:link{
 .nav-link{
     color: black;
     background-color: white;
+}
+
+#shopping-cart-order{
+    height:350px;
+    width:500px;
+    border:1px solid #a62121;
+    font:16px Arial, Serif;
+    overflow:auto;">
 }

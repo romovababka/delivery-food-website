@@ -283,6 +283,46 @@ function iceCream(){
 }
 
 
+//CLICK SHOPPING CART
+function clickShopCart(){
+    let body = document.getElementById("main-part");
+    body.innerHTML="";
+
+    let bodyElement = document.getElementById("main-part");
+    let bodyHTML = `
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" max="20">
+                <br>
+                <label for="phone">Phone:</label>
+                <br>
+                <input type="tel" id="phone" name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                <br>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email"
+                pattern=".+@globex\\.com" size="30" required>
+                <br>
+                <label for="name">Address</label>
+                <br>
+                <input type="text" max="40">
+            </div>
+            <div class="col-6">
+                <div id="shopping-cart-order">
+                Here will be user's order
+                </div>       
+            </div>
+        </div>
+    </div>
+    `
+    body.innerHTML = bodyHTML;
+}
+
+
 let buttonMc = document.getElementById("button-MC");
 buttonMc.addEventListener("click", Mc);
 
@@ -291,6 +331,10 @@ buttonKFC.addEventListener("click", KFC);
 
 let buttonIceCream = document.getElementById("button-ice-cream");
 buttonIceCream.addEventListener("click", iceCream);
+
+let clickShoppingCart = document.getElementById("shopping-cart");
+clickShoppingCart.addEventListener("click", clickShopCart);
+
 
 let food = {
     "Mc_Donner" : [
